@@ -1,53 +1,30 @@
 # Revvy In-House Tools
 
-Internal tools and utilities for Revvy operations.
+Internal calculators for Revvy ops and finance.
 
-## Tools
+## Available tools
+- Burn Rate Calculator: runway, combined costs, revenue projections.
+- Cost Calculator: infra/personnel/ops costs as user and transaction volume grows.
+- Revenue Calculator: revenue projections from volume and platform fee.
 
-### Burn Rate Calculator
+## Stack
+- Next.js 14 / React 18
+- TailwindCSS
 
-Interactive tool to project Revvy's burn rate based on:
-- User growth projections
-- Transaction volume scaling
-- Preconfigured cost structures
-- Adjustable parameters
-
-## Getting Started
+## Getting started
+Requirements: Node 18+ and npm.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the burn rate calculator.
+Open http://localhost:3000 for the tool index:
+- /burn-rate
+- /cost-calculator
+- /revenue-calculator
 
-## Features
-
-- **Adjustable Parameters:**
-  - Number of months to project
-  - Starting user count
-  - User growth rate (% per month)
-  - Starting transaction volume
-  - Transaction growth rate (% per month)
-
-- **Preconfigured Costs:**
-  - Vercel Pro (infrastructure)
-  - MongoDB Atlas (scaling tiers)
-  - Developer costs (personnel)
-  - Security tools (Sentry, Cloudflare, audits)
-  - Operations (Stripe fees, email, legal, accounting)
-
-- **Reports:**
-  - Monthly breakdown tables
-  - Cost trend charts
-  - Category breakdown pie charts
-  - Export to JSON
-
-## Cost Categories
-
-All costs are preconfigured based on the comprehensive burn rate analysis:
-- Infrastructure: Vercel, MongoDB, Cloudflare
-- Personnel: Developer costs
-- Security: Sentry, security audits
-- Operations: Stripe fees, email, legal, accounting, support
+## Notes
+- No external APIs or secrets required for local runs.
+- Costs and growth assumptions are encoded in `src/data/costConfig.ts` and component defaults; adjust as needed.
 
